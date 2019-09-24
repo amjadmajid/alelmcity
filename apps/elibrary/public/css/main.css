@@ -1,0 +1,214 @@
+html, body{
+    /*Make the height of the HTML and the body as long as the screen */
+    height: 100%;
+    /*remove any default margin an padding*/
+    margin:0;
+    padding:0px;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+}
+
+*{
+  box-sizing: border-box;
+  user-select: none;
+}
+
+form{
+    max-width: 96%;
+    margin: auto;
+}
+
+.deleteMessageCont{
+    width: 100%;
+    text-align: center;
+}
+.deleteMessage
+{
+    color: red;
+    text-orientation: none;
+    border: 1px solid red;
+    padding: 8px;
+    text-align: center;
+    margin: auto;
+    display: inline-block;
+    background-color: #fffda5;
+}
+
+.del {
+    text-decoration: none;
+    font-size: 1.1em;
+    color: #cc7f74;
+    float: right;
+}
+
+.del:hover {
+    color: #c44635;
+}
+
+.edit {
+    text-decoration: none;
+    font-size: 1.1em;
+    color: #E5EAEA;
+    float: right;
+}
+
+.edit:hover {
+    color: #fff;
+}
+
+.editChapter{
+    display: none;
+    background-color: #aaa;
+    text-align: center;
+    font-size: 1em;
+    color: #fff;
+    text-decoration: none;
+    padding: 2px;
+}
+
+.showChapter .editChapter{
+    display: block;
+    float: right;
+    }
+
+
+.error{
+    color: red;
+    border: 1px solid red;
+    padding: 5px;
+}
+
+.add{
+    background-color: #ccc;
+    font-weight: bold;
+    color: #444;
+    padding: 4px;
+    width: 100%;
+    text-align: left;
+    transition: background-color 0.3s;
+}
+
+#main {
+    background-color: rgba(237,243,243,0.8);
+
+    /*make the main div as long as its parent (body element)*/
+    height: 100%;
+    /*give transition effect to change the margin and the background color*/
+    transition: margin-left .5s, background-color .5s;
+    padding: 16px;
+}
+
+.welcomeString{
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+    vertical-align: middle;
+    color: #bbb;
+}
+
+.unit{
+     border-top: 1px solid #91B6B6;
+     border-right: 1px solid #91B6B6;
+     border-left: 1px solid #91B6B6;
+}
+
+/*.borderShow{
+    border-top: 1px solid #fff;
+}*/
+
+.book{
+    display: block;
+    background-color: #3C7979;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    /*color: #E5EAEA;*/
+    color:#fff;
+    font-size: 1em;
+    padding: 14px;
+    width: 100%;
+    text-align: left;
+    transition: background-color 0.3s;
+}
+
+/*.book:hover {
+    background-color: #ddd;
+}
+*/
+.book::after{
+    content: '+';
+    color: #E5EAEA;
+    font-weight: bold;
+    float:right;
+}
+.showChapter .book::after{
+    content: '-';
+}
+
+.chapter{
+    display: none;
+    background-color: #91B6B6;
+    /*font-weight: bold;*/
+    color: #fff;
+    padding: 18px;
+    /*border-left: 4px solid #81C381;*/
+    width: 100%;
+    text-align: left;
+    transition: background-color 0.3s;
+    border-bottom: 1px solid white;
+    font-size: 0.875em;
+}
+
+/*.chapter:hover {
+    background-color: #ddd;
+}*/
+
+.content{
+    display: none;
+    border-left: 4px solid #ccc;
+    padding: 18px;
+    background-color: #fff;
+    font-size: 0.75em;
+    /*white-space: pre;*/
+    /*white-space: pre-wrap; */      /* css-3 */
+   /* white-space: -moz-pre-wrap;*/  /* Mozilla, since 1999 */
+   /* white-space: -pre-wrap; */     /* Opera 4-6 */
+    /*white-space: -o-pre-wrap; */   /* Opera 7 */
+   /* word-wrap: break-word;  */     /* Internet Explorer 5.5+ */
+}
+
+.showChapter .chapter{
+    display: block;
+}
+
+.showChapter .showContent.content{
+    display: block;
+}
+
+
+.addNewBook{
+    display: block;
+    background-color: #91B6B6;
+    text-align: center;
+    font-size: 1.3em;
+    color: #fff;
+    text-decoration: none;
+    padding: 6px;
+}
+
+.addNewChapter{
+    display: none;
+    background-color: #C4D9D9;
+    text-align: center;
+    font-size: 1.3em;
+    color: #000;
+    text-decoration: none;
+    padding: 6px;
+}
+.showChapter.showNewChapter .addNewChapter{
+    display: block;
+    }
+
+
+

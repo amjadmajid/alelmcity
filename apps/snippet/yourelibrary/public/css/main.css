@@ -1,0 +1,136 @@
+*{
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.error{
+    color: red;
+    border: 1px solid red;
+    padding: 5px;
+}
+
+.welcomeString{
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+    vertical-align: middle;
+    color: #bbb;
+}
+
+.borderShow{
+    border: 1px solid #fff;
+}
+
+.book{
+    display: block;
+    background-color: #ccc;
+    font-weight: bold;
+    color: #444;
+    font-size: 1.3em;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    transition: background-color 0.3s;
+}
+
+/*.book:hover {
+    background-color: #ddd;
+}
+*/
+.book::after{
+    content: '+';
+    color: #000;
+    font-weight: bold;
+    float:right;
+}
+.showChapter .book::after{
+    content: '-';
+}
+
+.chapter{
+    display: none;
+    background-color: #eee;
+    font-weight: bold;
+    color: #444;
+    padding: 18px;
+    border-left: 4px solid #ccc;
+    width: 100%;
+    text-align: left;
+    transition: background-color 0.3s;
+}
+
+/*.chapter:hover {
+    background-color: #ddd;
+}*/
+
+.content{
+    display: none;
+    border-left: 4px solid #ccc;
+    padding: 18px;
+    background-color: #fff;
+    white-space: pre;
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+.showChapter .chapter{
+    display: block;
+}
+
+.showChapter .showContent.content{
+    display: block;
+}
+
+.add{
+    background-color: #ccc;
+    font-weight: bold;
+    color: #444;
+    padding: 4px;
+    width: 100%;
+    text-align: left;
+    transition: background-color 0.3s;
+}
+
+.addNewBook{
+    display: block;
+    background-color: #aaa;
+    text-align: center;
+    font-size: 1.3em;
+    color: #fff;
+    text-decoration: none;
+    padding: 6px;
+}
+
+.addNewChapter{
+    display: none;
+    background-color: #fff;
+    text-align: center;
+    font-size: 1.3em;
+    color: #000;
+    text-decoration: none;
+    padding: 6px;
+}
+.showChapter.showNewChapter .addNewChapter{
+    display: block;
+    }
+
+.editChapter{
+    display: none;
+    background-color: #aaa;
+    text-align: center;
+    font-size: 1em;
+    color: #fff;
+    text-decoration: none;
+    padding: 2px;
+}
+
+.showChapter .editChapter{
+    display: block;
+    float: right;
+    }
+
+
+

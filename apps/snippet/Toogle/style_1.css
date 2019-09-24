@@ -1,0 +1,133 @@
+*{
+    margin:0px;
+	padding:0px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size : 13px;
+}
+body{
+    width:100%;
+}
+#container{
+	background-color:#B29980;
+	width: 1200px;
+    margin-right:auto;
+    margin-left:auto;
+}
+#subCont{
+	width:1000px;
+		background-color:#E0D6CC;
+		float: left;
+		height: auto;
+
+}
+#rightCont{
+	width:200px;
+		background-color:#f5f5f5;
+		float: right;
+		height: 100%;
+		overflow-y:scroll;
+		overflow-x:hidden; 
+}
+.rightList {
+    float:right;
+    text-decoration:none;
+    font-weight:bold;
+    color:#472400;
+   display:block;
+   width:200px;
+   height: 40px;
+   margin-top:1px;
+   text-align:center;
+   background-color: #F0EBE6;
+   padding-top: 10px;
+
+}
+#rightList{
+   list-style-type:none;    
+}
+#rightCont a:hover{
+    background-color:#C2AD99;
+}
+
+#logo{
+    width:auto;
+    height:auto;
+   float:right;
+}
+
+#logo img{
+    width:200px;
+    height:auto;
+}
+
+.classTitle{
+float:left;
+display:block; 
+text-align:center; 
+font-weight:bold; 
+font-size:20px;  
+width:1000px; 
+height:34px; 
+color:#fff; 
+text-decoration:none; 
+background-color:    #855C33;
+}
+.note{
+    font-weight:normal;
+    font-size:24px; 
+    color:#FFCC99;
+    float:left;
+
+}
+.noteAR{
+    font-weight:normal;
+    font-size:24px; 
+    color:#FFCC99;
+    float:left;
+}
+
+.captionText{
+    padding-right: 2px;
+    padding-top:2px;
+  color:#3D2914;
+  text-decoration:none; 
+  display:block;
+  width: 189px; /* the is a margin-right of 1 px*/
+  height:38px;
+  overflow-y:scroll;
+  overflow-x:hidden; 
+  background-color:white;
+} 
+
+
+.lessons{
+	width:1000px;
+	height:180px;
+	overflow-y:scroll;
+	overflow-x:hidden;
+  float:left;
+
+}
+
+.videoCaption{
+    border: 1px solid   #fff;
+    width:auto;
+    height:auto;
+    display:block;
+    float:right;
+}
+
+.lessonsLink{
+	margin-right:1px; 
+	float:right;
+    text-decoration:none; 
+
+}
+
+
+.videoImage{
+	width:190px;
+}
+
+
+

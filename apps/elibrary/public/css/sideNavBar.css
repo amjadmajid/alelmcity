@@ -1,0 +1,37 @@
+.sidenav {
+    height: 100%;
+    width: 0px;
+    /*Postion the element relative to the viewport (screen). 
+    The element will stay in its position even when the page is scrolled*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden; /*the text will overflow */
+    transition: width 0.5s;/* give opening/closing the nav menu some transition effect */
+    padding-top: 60px;
+    background-color: #91B6B6;
+}
+
+.sidenav .shelf_cont {
+    padding: 4px;
+    transition: 0.3s;
+    background-color: #3C7979;
+    border-bottom: 1px solid white;
+}
+
+.sidenav .shelf {
+    /*remove the underline of the links*/
+    padding-left: 6px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #EDF3F3;
+    font-family: 'Roboto', sans-serif;
+}
+
+.sidenav a:hover {
+    color: #fff;
+}
+
+#sidenavCntr{
+    font-size: 3em;
+}

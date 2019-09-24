@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang='ar'>
+<head>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108815762-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-108815762-1');
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Free online courses, mostly taught in arabic language" />
+    <meta name="keywords" content="دروس اونلان، رياضيات، الانجليزي، برمجة، الاحتمالية، الهولندية" />
+
+    <link href="https://fonts.googleapis.com/css?family=Mada|Reem+Kufi|Cairo" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+
+  <title>مدينة العلم</title>
+</head>
+
+<body dir='rtl' >
+
+    <!-- Start of  the website header-->
+    <div class="header">
+        <div class="headerbody orangeText" >
+            مدينة العلم 
+            <span style='float:left;padding-top: 10px; margin-bottom: -10px; margin-left: 10px;'> 
+                <a href="https://www.facebook.com/alelmcity" target="_blank" >
+                    <img style="height:40px" src="../images/facebook.svg", alt="facebook"> 
+                </a>
+            </span>
+            <span style='float:left;padding-top: 10px; margin-bottom: -10px; margin-left: 10px;'> 
+                <a href="https://www.youtube.com/c/alelmcity" target="_blank" >
+                    <img style="height:40px" src="../images/youtube.svg", alt="youtube"> 
+                </a>
+            </span>
+            <span style=' font-size:13px; color:#fff; float:left;padding-top: 10px; margin-bottom: -10px; margin-left: 10px;'> 
+                    <span class="lightBlueText sansFont"> اشترك ليصلك كل جديد </span>
+            </span>
+        </div>
+    </div>
+
+    <!-- Start of  the website body-->
+
+    <div id="bodyId"  style="text-align:center">
+
+
+                <textarea id="sentence" style="height: 10em; width: 70em; margin-left: auto; margin-right: auto;"> ضع النص هنا ثم حدد سرعة عرض الكلمات و اضغط زر ابدء </textarea>
+        <div ="middel">
+            <p id="para">  
+                   <span>سرعة القراءة </span>   <input id ="speed" type="text" value="150">             <span id="arabic">كلمة في الدقيقة</span>  
+             </p>
+        
+         <button id="send" > ابــدء </button>
+
+       </div>
+ 
+    <div id ="word" style="font-size:1.5em;margin:20px;"></div>
+
+<script>
+
+window.onload = function(){
+    loader();
+}
+
+var words = [] ;
+var i = -1 ;
+var endInterval;
+var text;
+var delay;
+ 
+     function loader(){
+         
+         
+       document.getElementById("send").onclick = function(){
+        str =   (document.getElementById("sentence").value);
+        text = str.replace(/<\/?[^>]+(>|$)/g, "");
+        words = text.split(" ");
+        
+        delay = document.getElementById("speed").value;
+        if(isNaN(delay)){
+            return;
+        }else{
+        delay = Math.round((60/delay)*1000);
+         
+        endInterval = setInterval( displayer, delay );
+        
+       }
+    }
+        function displayer(){
+            i++;
+            if(i == (words.length-1))
+            { 
+                clearInterval(endInterval);
+            
+            }
+            document.getElementById('word').innerHTML = words[i]; 
+        }
+     }   
+</script>
+
+        
+        <!-- Start of  the website footer-->
+    <div class="footId">
+        
+        <div class="footbodyId lightBlueText sansFont" >
+            <div class="footerSection">
+                <div class="footerSectionBody"> 
+                    <img src="../images/cokLogo.jpg" style="width:160px; float:right">
+                </div>
+            </div>
+
+            <div class="footerSection">
+                <div class="footerSectionHeader"> 
+                    <b> تطبيقات: </b>
+                </div>
+                <div class="footerSectionBody"> 
+                    <ul>
+                        <li>
+                            <a href="apps/rasm/index.html" target="_blank">الرسم</a>
+                        </li>
+                        <li>
+                            <a href="apps/fastreading.html" target="_blank">القراءة السريعة</a>
+                        </li>
+                        <li>
+                            <a href="apps/fasttyping.html" target="_blank">الطباعة السريعة</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footerSection">
+                <div class="footerSectionHeader"> 
+                    <b> عنــا: </b>
+                </div>
+                <div class="footerSectionBody"> 
+                    موقع مدينة العلم يهدف الى نشر الدروس التعليمية المشروحة باللغة العربية.
+                </div>
+            </div>
+
+            <div class="footerSection">
+                <div class="footerSectionHeader"> 
+                    <b> اشترك معنا: </b>
+                </div>
+                <div class="footerSectionBody"> 
+                    <ul>
+                        <li>
+                            <a href="https://www.youtube.com/c/alelmcity" target="_blank" >
+                                <img class="socialMediaImg" src="../images/youtube.svg", alt="youtube"> 
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/alelmcity" target="_blank" >
+                                <img class="socialMediaImg" src="../images/facebook.svg", alt="facebook"> 
+                            </a>
+                        </li>
+                    </ul>
+                    
+                </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+

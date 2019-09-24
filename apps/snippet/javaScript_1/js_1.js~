@@ -1,0 +1,8 @@
+function sizeChange(){
+var a = document.getElementById('left').getElementsByTagName('a');
+for (var i = 0; i < a.length; i++) {
+    var elem = a[i],
+    elem.style.fontSize = 16;
+}
+
+}

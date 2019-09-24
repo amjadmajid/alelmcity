@@ -1,0 +1,55 @@
+html, body{
+    /*Make the height of the HTML and the body as long as the screen */
+    height: 100%;
+    /*remove any default margin an padding*/
+    margin:0;
+    padding:0px;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0px;
+    /*Postion the element relative to the viewport (screen). 
+    The element will stay in its position even when the page is scrolled*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden; /*the text will overflow */
+    transition: width 0.5s;/* give opening/closing the nav menu some transition effect */
+    padding-top: 60px;
+}
+
+.sidenav a {
+          /* top   right   bottom   left */
+    padding: 8px   8px     8px      32px;
+    /*remove the underline of the links*/
+    text-decoration: none;
+    font-size: 24px;
+    color: #a1a1a1;
+    /*Display each link on a separate line*/
+    display: block;
+    /* give some transition effect to the `hover` action */
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #000;
+}
+
+#main {
+    background-color: rgba(204,204,204,0.8);
+
+    /*make the main div as long as its parent (body element)*/
+    height: 100%;
+    /*give transition effect to change the margin and the background color*/
+    transition: margin-left .5s, background-color .5s;
+    padding: 16px;
+}
+
+#sidenavCntr{
+    font-size: 3em;
+}

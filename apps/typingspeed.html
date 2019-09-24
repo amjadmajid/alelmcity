@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div style="width:800px;">
+
+<p> 
+Baghdad is the capital of the Republic of Iraq. The population of Baghdad, as of 2011, is approximately 7,216,040, making it the largest city in Iraq, the second largest city in the Arab world (after Cairo, Egypt), and the second largest city in Western Asia (after Tehran, Iran). According to the government, which is preparing for a census, the population of the country has reached 35 million, with 9 million in the capital.
+    
+</p>
+
+<button onclick="myFunction()"> Start >> </button>
+<br><br>
+<textarea style="width:798px; height:200px" id="words">How to use: First, click "start" then start typing the text above. When you finish click "Check your speed" 
+</textarea>
+<br><br>
+<button onclick="myFunction2()"> Check your speed </button>
+
+<p id="demo"></p>
+</div>
+<script>
+var n = 0 ;
+var m = 0 ;
+var check = false;
+function myFunction() {
+    var d = new Date();
+    n = d.getTime();
+   document.getElementById("words").value = "";
+   check = true;
+}
+
+function myFunction2() {
+    if(check){
+        check = false;
+    var d = new Date();
+    m = d.getTime();
+    var str = document.getElementById("words").value;
+    
+    var words = str.split(" ");
+    var c = ((m-n) / 1000 )/60 ;
+     var result =  Math.round(words.length / c) ;
+   
+    document.getElementById("demo").innerHTML = result+" Word in a minute"  ;
+    }else{
+         document.getElementById("demo").innerHTML = "Click start and type than click check your speed"  ;
+    }
+}
+
+</script>
+
+</body>
+</html>
